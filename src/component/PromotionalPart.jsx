@@ -10,7 +10,9 @@ const PromotionalPart = () => {
   return (
     <>
     <main>
-        <div className='bg-lasat  bg-no-repeat py-5 bg-center bg-cover'>
+        <div className='py-10' style={{
+        background: "linear-gradient(90deg, hsla(300, 43%, 89%, 1) 8%, hsla(206, 54%, 97%, 1) 43%, hsla(23, 62%, 93%, 1) 64%, hsla(184, 56%, 95%, 1) 87%)",
+      }}>
         <Container>
             <Flex className={'flex-col'}>
                 <div className="text-center w-full">

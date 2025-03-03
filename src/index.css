@@ -4,5 +4,6 @@
 @theme{
     --font-apa:"Archivo";
     --font-brad:"Berkshire Swash";
-    --background-image-lasat: url("./assets/img/Gradient.svg");
+    /* --background-image-lasat: url("./assets/img/Gradient.svg"); */
+    /* --color-lalal: 'linear-gradient(90deg, hsla(300, 43%, 89%, 1) 8%, hsla(206, 54%, 97%, 1) 43%, hsla(23, 62%, 93%, 1) 64%, hsla(184, 56%, 95%, 1) 87%)'; */
 }

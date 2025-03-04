@@ -16,7 +16,7 @@ const Header = () => {
     <div className=" py-5">
 
       <Container>
-        <Flex className={"justify-center items-center w-full"}>
+        <Flex className={"justify-center items-center w-full relative"}>
           <div className="">
             <div className="flex gap-10 lg:hidden  ">
               {/* Mobile menu */}
@@ -27,7 +27,8 @@ const Header = () => {
               </button>
             </div>
             {open && (
-              <div className="  bg-backdrop:blur-lg gap-5 z-50 py-7 flex flex-col items-center lg:hidden">
+              <div className=" w-full top-full left-0 z-50  backdrop-blur-sm  gap-5 b absolute py-7  flex flex-col items-center lg:hidden ">
+                <div className=" bg-white/30 backdrop-blur-lg py-5 px-10 rounded-xl">
                 <Menu className={"flex flex-col items-center gap-y-5 "}>
                   <li className='text-xl text-[#0F0200] leading-4 font-apa  hover:text-2xl hover:text-[#F83D8E] duration-300'>Home </li>
                   <li className='text-xl text-[#0F0200] leading-4 font-apa  hover:text-2xl hover:text-[#F83D8E] duration-300'>About Us</li>
@@ -35,9 +36,10 @@ const Header = () => {
                   <li className='text-xl text-[#0F0200] leading-4 font-apa  hover:text-2xl hover:text-[#F83D8E] duration-300'>Blog</li>
                   <li className='text-xl text-[#0F0200] leading-4 font-apa  hover:text-2xl hover:text-[#F83D8E]' duration-300>Faq's</li>
                 </Menu>
-                <button className='bg-[#F83D8E] flex items-center gap-2 py-4 px-6 rounded-full text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)]'>
+                <button className='bg-[#F83D8E] flex items-center gap-2 py-4 px-6 rounded-full text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] mt-4'>
                   Contact Us <FaLongArrowAltRight />
                 </button>
+                </div>
               </div>
             )}
             {/* Mobile menu */}
@@ -58,7 +60,7 @@ const Header = () => {
             <CiSearch />
             <BsBag />
             </div>
-            <button className='bg-[#F83D8E] flex items-center gap-2 py-4 px-6 rounded-full text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] lg:py-3 lg:px-4 lg:text-base lg:text-wrap'>
+            <button className='bg-[#F83D8E] flex items-center gap-2 py-4 px-6 rounded-full text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] lg:py-3 lg:px-4 lg:text-base lg:text-wrap '>
               Contact Us <FaLongArrowAltRight />
             </button>
           </div>

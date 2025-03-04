@@ -23,7 +23,7 @@ const EmailPart = () => {
                             </button>
                         </div>
                         <div className="flex items-center gap-2 mt-5 justify-center -ml-20">
-                            <input type="checkbox" name="checkbox" id="checkbox" className='rounded-full outline-none bg-white px-3 py-1 text-[14px] font-apa' />
+                            <input type="radio" name="checkbox" id="checkbox" className='rounded-full outline-none bg-[#E8E8E8] h-3 w-3 text-[14px] font-apa' />
                             <label htmlFor="checkbox" className='text-[#646464] font-apa text-[10px]'>I have read and agree to the <span className='text-[#F83D8E] underline'>Privacy Policy</span></label>
                             
                         </div>

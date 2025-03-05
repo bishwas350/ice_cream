@@ -3,12 +3,15 @@ import Header from '../component/Header'
 import PromotionalPart from '../component/PromotionalPart'
 import EmailPart from '../component/EmailPart'
 import ReviewPart from '../component/ReviewPart'
+import Banenr from '../component/Banenr'
+import Explore from '../component/Explore'
 
 const Home = () => {
   return (
     <>
-    <div className="bg-yellow-600 py-5">content</div>
-    <ReviewPart/>
+    <Banenr/>
+    <Explore/>
+    {/* <ReviewPart/> */}
     <EmailPart/>
     <PromotionalPart/>
     </>

@@ -4,6 +4,14 @@
 @theme{
     --font-apa:"Archivo";
     --font-brad:"Berkshire Swash";
-    /* --background-image-quata: url("./assets/img/qoutes.png"); */
+    --background-image-bannerBg: url("./assets/img/banner.png");
     /* --color-lalal: 'linear-gradient(90deg, hsla(300, 43%, 89%, 1) 8%, hsla(206, 54%, 97%, 1) 43%, hsla(23, 62%, 93%, 1) 64%, hsla(184, 56%, 95%, 1) 87%)'; */
 }
+
+.box {
+    --mask:
+      radial-gradient(50.4px at 50% calc(100% - 70.5px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+      radial-gradient(50.4px at 50% calc(100% + 40.5px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }

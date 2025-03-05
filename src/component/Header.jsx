@@ -13,7 +13,7 @@ import { BsBag } from "react-icons/bs";
 const Header = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className=" py-5">
+    <div className=" md:py-1 bg-transparent border-b-2 border-[#F83D8E]">
 
       <Container>
         <Flex className={"justify-center items-center w-full relative"}>

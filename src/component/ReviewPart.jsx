@@ -26,7 +26,7 @@ const ReviewPart = () => {
                             <div className="">
                                 <h1 className=' font-brad leading-10 text-2xl text-center lg:text-6xl md:text-4xl md:leading-14 lg:leading-16'>Hear from Our <span className='text-[#F83D8E] '>Happy <br />
                                     Ice Cream</span> Lovers</h1>
-                                <div className="realative mt-[138px] mb-16">
+                                <div className="relative mt-[138px] mb-16">
                                     <img src={quata} alt={quata} className='absolute top-[370px] left-[70px] md:left-[300px] lg:left-[400px] xl:left-[650px]' />
                                     <img src="" alt="" />
                                     <p className='font-apa font-medium leading-4 text-[10px] md:text-[15px] md:leading-5 lg:text-[20px] lg:leading-8 text-[#0F0200] text-center px-1'>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas as <br />

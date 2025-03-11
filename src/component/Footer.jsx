@@ -55,8 +55,7 @@ const Footer = () => {
               </div>
             </Flex>
           </div>
-
-
+          
         </Flex>
       </Container>
     </div>

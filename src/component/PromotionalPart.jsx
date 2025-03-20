@@ -10,14 +10,14 @@ const PromotionalPart = () => {
   return (
     <>
     <main>
-        <div className='py-10' style={{
-        background: "linear-gradient(90deg, hsla(300, 43%, 89%, 1) 8%, hsla(206, 54%, 97%, 1) 43%, hsla(23, 62%, 93%, 1) 64%, hsla(184, 56%, 95%, 1) 87%)",
+        <div className='py-10 bg-promotional dark:bg-promotional-dark' style={{
+        background: "var(--gradient-promotional, linear-gradient(90deg, hsla(300, 43%, 89%, 1) 8%, hsla(206, 54%, 97%, 1) 43%, hsla(23, 62%, 93%, 1) 64%, hsla(184, 56%, 95%, 1) 87%))",
       }}>
         <Container>
             <Flex className={'flex-col'}>
                 <div className="text-center w-full">
-                    <h3 className='font-brad text-2xl leading-16 text-[#0F0200] m-auto'>Follow Us on <span className='text-[#F83D8E]'>Instagram</span></h3>
-                    <p className='font-apa  leading-7 text-[#646464]'>Join our Instagram community for updates, special deals, and more!</p>
+                    <h3 className='font-brad text-2xl leading-16 text-foreground m-auto'>Follow Us on <span className='text-[#F83D8E] dark:text-[#FF6EB0]'>Instagram</span></h3>
+                    <p className='font-apa leading-7 text-muted-foreground'>Join our Instagram community for updates, special deals, and more!</p>
                 </div>
                 <div className="flex flex-row flex-wrap justify-center gap-5 mt-5">
                     <img src={ice} alt={ice} className='h-[100px] w-[100px]'/>

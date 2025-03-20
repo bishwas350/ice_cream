@@ -18,14 +18,12 @@ const ReviewPart = () => {
     return (
         <>
             <main>
-                <div className="py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden" style={{
-                    background: "linear-gradient(90deg, hsla(300, 43%, 89%, 1) 8%, hsla(206, 54%, 97%, 1) 43%, hsla(23, 62%, 93%, 1) 64%, hsla(184, 56%, 95%, 1) 87%)"
-                }}>
+                <div className="py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden bg-promotional">
                     <Container>
                         <Flex className={'flex-col'}>
                             <div className="relative w-full px-4 sm:px-6 md:px-8 overflow-hidden min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[550px]">
-                                <h1 className='font-brad leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center'>
-                                    Hear from Our <span className='text-[#F83D8E]'>Happy <br className="sm:hidden" />
+                                <h1 className='font-brad leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-foreground'>
+                                    Hear from Our <span className='text-destructive'>Happy <br className="sm:hidden" />
                                     Ice Cream</span> Lovers
                                 </h1>
                                 <div className="relative mt-16 sm:mt-20 md:mt-24 lg:mt-28 mb-10 sm:mb-12 md:mb-16 max-w-4xl mx-auto">
@@ -37,7 +35,7 @@ const ReviewPart = () => {
                                     />
                                     <p className='font-apa font-medium text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg 
                                        leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed 
-                                       text-[#0F0200] text-center px-4 sm:px-8 md:px-12 lg:px-16 max-w-3xl mx-auto'>
+                                       text-foreground text-center px-4 sm:px-8 md:px-12 lg:px-16 max-w-3xl mx-auto'>
                                         Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas as <br className="hidden md:block" />
                                         pernatur aut odit aut fugit, sed beatae vitae dicta ripiscing elit, sed do euismod <br className="hidden md:block" />
                                         tempor incidunt. Labore et dolore magna aliqua ut enim ad minim adipiscing elit, sed <br className="hidden md:block" />
@@ -46,16 +44,16 @@ const ReviewPart = () => {
                                 </div>
                                 <h3 className='font-apa text-center font-bold leading-2.5 text-[18px] text-[#F83D8E]'>Kevin Andrew</h3>
                                 <p className='font-apa text-[14px] leading-2.5 text-[#646464] text-center mt-2.5'>Happy Customer</p>
-                                <div className="flex justify-center gap-1 sm:gap-2 mt-2.5 sm:mt-3 md:mt-4 text-[#FBAB2A]">
+                                <div className="flex justify-center gap-1 sm:gap-2 mt-2.5 sm:mt-3 md:mt-4 text-chart-5">
                                     <FaStar className="text-sm sm:text-base md:text-lg lg:text-xl" />
                                     <FaStar className="text-sm sm:text-base md:text-lg lg:text-xl" />
                                     <FaStar className="text-sm sm:text-base md:text-lg lg:text-xl" />
                                     <FaStar className="text-sm sm:text-base md:text-lg lg:text-xl" />
                                     <FaStar className="text-sm sm:text-base md:text-lg lg:text-xl" />
                                 </div>
-                                <div className="flex justify-center mt-4 sm:mt-5 md:mt-6 lg:mt-8 gap-x-1 sm:gap-x-2 text-[#E1E1E2]">
+                                <div className="flex justify-center mt-4 sm:mt-5 md:mt-6 lg:mt-8 gap-x-1 sm:gap-x-2 text-border">
                                     <GoDotFill className='text-lg sm:text-xl md:text-2xl lg:text-3xl' />
-                                    <GoDotFill className='text-xl sm:text-2xl md:text-3xl lg:text-4xl -translate-y-1 sm:-translate-y-1.5 md:-translate-y-2 text-[#F83D8E]' />
+                                    <GoDotFill className='text-xl sm:text-2xl md:text-3xl lg:text-4xl -translate-y-1 sm:-translate-y-1.5 md:-translate-y-2 text-destructive' />
                                     <GoDotFill className='text-lg sm:text-xl md:text-2xl lg:text-3xl' />
                                     <GoDotFill className='text-lg sm:text-xl md:text-2xl lg:text-3xl' />
                                 </div>

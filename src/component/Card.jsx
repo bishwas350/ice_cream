@@ -1,6 +1,8 @@
 import './Card.css';
 
 import IceCream from '../assets/img/choco.png'
+import IceCream2 from '../assets/img/card_img.png'
+import IceCream3 from '../assets/img/card_img2.png'
 import React from 'react'
 import Container from './Container'
 import Flex from './Flex'
@@ -18,7 +20,7 @@ const Card = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 2000,
         pauseOnHover: true,
         responsive: [
             {
@@ -38,7 +40,7 @@ const Card = () => {
             }
         ]
     };
-    
+
     return (
         <>
             <main style={{
@@ -53,104 +55,104 @@ const Card = () => {
                         <div className="slider-container w-full px-12">
                             <Slider {...settings}>
                                 <div className="px-2">
-                                    <div className="rounded-[10px] bg-[#FFF3EA] p-3 items-center m-2">
-                            <div className="flex justify-center">
-                            <img src={IceCream} alt="" className='h-[100px] w-[100px]'/>
-                            </div>
-                            <div className="flex">
-                            <div className="w-[70%]">
-                            <h2>Chocolate Chip <br/>
-                            Cookie Cone</h2></div>
-                            <div className="w-[30%] ">
-                            <Flex className={'justify-end items-center'}>
-                                <FaStar />
-                                    <span>4.4</span>
-                                </Flex></div>
-                            </div>
-                            <p>Chocolate chip cookie dough <br/>
-                            ice cream in a cone.</p>
-                            <div className="flex">
-                                <div className="w-1/2">
-                                    <span>$4.45</span>
-                                </div>
-                                <div className="w-1/2">
-                                <Flex className={'justify-end'}>
-                                <div className="bg-[#683292] p-3 rounded-full">
-                                <CiShoppingCart />
+                                    <div className="rounded-[10px] bg-white p-3 items-center m-2">
+                                        <div className="flex justify-center">
+                                            <img src={IceCream} alt="" className='h-[250px] w-full' />
+                                        </div>
+                                        <div className="flex">
+                                            <div className="w-[70%]">
+                                                <h2 className=' font-bold font-apa  leading-6'>Chocolate Chip <br />
+                                                    Cookie Cone</h2></div>
+                                            <div className="w-[30%] ">
+                                                <Flex className={'justify-end items-center'}>
+                                                    <FaStar className='text-[#FBAB2A]' />
+                                                    <span className='text-[#0F0200] font-semibold font-apa'>4.4</span>
+                                                </Flex></div>
+                                        </div>
+                                        <p className='text-[#646464] font-apa'>Chocolate chip cookie dough <br />
+                                            ice cream in a cone.</p>
+                                        <div className="flex items-center">
+                                            <div className="w-1/2">
+                                                <span className='font-apa font-bold text-[#F83D8E]'>$4.45</span>
+                                            </div>
+                                            <div className="w-1/2">
+                                                <Flex className={'justify-end'}>
+                                                    <div className="bg-[#683292] p-3 rounded-full">
+                                                        <CiShoppingCart className='text-white text-2xl '/>
 
+                                                    </div>
+                                                </Flex>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                </Flex>
-                                </div>
-                            </div>
-                                </div>
-                            </div>
-                            <div className="px-2">
-                                <div className="rounded-[10px] bg-[#FFF3EA] p-3 items-center m-2">
-                            <div className="flex justify-center">
-                            <img src={IceCream} alt="" className='h-[100px] w-[100px]'/>
-                            </div>
-                            <div className="flex">
-                            <div className="w-[70%]">
-                            <h2>Chocolate Chip <br/>
-                            Cookie Cone</h2></div>
-                            <div className="w-[30%] ">
-                            <Flex className={'justify-end items-center'}>
-                                <FaStar />
-                                    <span>4.4</span>
-                                </Flex></div>
-                            </div>
-                            <p>Chocolate chip cookie dough <br/>
-                            ice cream in a cone.</p>
-                            <div className="flex">
-                                <div className="w-1/2">
-                                    <span>$4.45</span>
-                                </div>
-                                <div className="w-1/2">
-                                <Flex className={'justify-end'}>
-                                <div className="bg-[#683292] p-3 rounded-full">
-                                <CiShoppingCart />
+                                <div className="px-2">
+                                    <div className="rounded-[10px] bg-white p-3 items-center m-2">
+                                        <div className="flex justify-center">
+                                            <img src={IceCream2} alt="" className='h-[250px] w-full' />
+                                        </div>
+                                        <div className="flex">
+                                            <div className="w-[70%]">
+                                                <h2 className='font-bold font-apa  leading-6'>Chocolate Chip <br />
+                                                    Cookie Cone</h2></div>
+                                            <div className="w-[30%] ">
+                                                <Flex className={'justify-end items-center'}>
+                                                    <FaStar className='text-[#FBAB2A]'/>
+                                                    <span className='text-[#0F0200] font-semibold font-apa'>4.4</span>
+                                                </Flex></div>
+                                        </div>
+                                        <p>Chocolate chip cookie dough <br />
+                                            ice cream in a cone.</p>
+                                        <div className="flex">
+                                            <div className="w-1/2">
+                                                <span className='font-apa font-bold text-[#F83D8E]'>$4.45</span>
+                                            </div>
+                                            <div className="w-1/2">
+                                                <Flex className={'justify-end'}>
+                                                    <div className="bg-[#683292] p-3 rounded-full">
+                                                        <CiShoppingCart className='text-white text-2xl'/>
 
+                                                    </div>
+                                                </Flex>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                </Flex>
-                                </div>
-                            </div>
-                                </div>
-                            </div>
-                            <div className="px-2">
-                                <div className="rounded-[10px] bg-[#FFF3EA] p-3 items-center m-2">
-                            <div className="flex justify-center">
-                            <img src={IceCream} alt="" className='h-[100px] w-[100px]'/>
-                            </div>
-                            <div className="flex">
-                            <div className="w-[70%]">
-                            <h2>Chocolate Chip <br/>
-                            Cookie Cone</h2></div>
-                            <div className="w-[30%] ">
-                            <Flex className={'justify-end items-center'}>
-                                <FaStar />
-                                    <span>4.4</span>
-                                </Flex></div>
-                            </div>
-                            <p>Chocolate chip cookie dough <br/>
-                            ice cream in a cone.</p>
-                            <div className="flex">
-                                <div className="w-1/2">
-                                    <span>$4.45</span>
-                                </div>
-                                <div className="w-1/2">
-                                <Flex className={'justify-end'}>
-                                <div className="bg-[#683292] p-3 rounded-full">
-                                <CiShoppingCart />
+                                <div className="px-2">
+                                    <div className="rounded-[10px] bg-white p-3 items-center m-2">
+                                        <div className="flex justify-center">
+                                            <img src={IceCream3} alt="" className='h-[250px] w-full' />
+                                        </div>
+                                        <div className="flex">
+                                            <div className="w-[70%]">
+                                                <h2 className='font-bold font-apa  leading-6'>Chocolate Chip <br />
+                                                    Cookie Cone</h2></div>
+                                            <div className="w-[30%] ">
+                                                <Flex className={'justify-end items-center'}>
+                                                    <FaStar className='text-[#FBAB2A]'/>
+                                                    <span className='text-[#0F0200] font-semibold font-apa'>4.4</span>
+                                                </Flex></div>
+                                        </div>
+                                        <p>Chocolate chip cookie dough <br />
+                                            ice cream in a cone.</p>
+                                        <div className="flex">
+                                            <div className="w-1/2">
+                                                <span className='font-apa font-bold text-[#F83D8E]'>$4.45</span>
+                                            </div>
+                                            <div className="w-1/2">
+                                                <Flex className={'justify-end'}>
+                                                    <div className="bg-[#683292] p-3 rounded-full">
+                                                        <CiShoppingCart className='text-white text-2xl'/>
 
+                                                    </div>
+                                                </Flex>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                </Flex>
-                                </div>
-                            </div>
-                                </div>
-                            </div>
-                        </Slider>
-                    </div>
-                </Flex>
+                            </Slider>
+                        </div>
+                    </Flex>
                 </Container>
             </main>
         </>

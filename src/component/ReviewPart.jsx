@@ -64,25 +64,25 @@ const ReviewPart = () => {
                                     src={bolda1} 
                                     alt="Decorative Ice Cream" 
                                     className='absolute h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[70px] md:w-[70px] lg:h-[100px] lg:w-[100px] 
-                                    top-[30%] left-[5%] sm:left-[10%] md:left-[15%] lg:left-[20%] transition-transform hover:scale-110 duration-300' 
+                                    top-[20%] left-[5%] sm:left-[10%] md:left-[15%] md:top-[10%] lg:left-[20%] transition-transform hover:scale-110 duration-300' 
                                 />
                                 <img 
                                     src={bolda2} 
                                     alt="Decorative Ice Cream" 
                                     className='absolute h-[35px] w-[35px] sm:h-[45px] sm:w-[45px] md:h-[60px] md:w-[60px] lg:h-[80px] lg:w-[80px] 
-                                    top-[40%] left-[2%] sm:left-[6%] md:left-[8%] lg:left-[12%] transition-transform hover:scale-110 duration-300' 
+                                    top-[50%] left-[2%]  md:left-[8%] lg:left-[12%] transition-transform hover:scale-110 duration-300' 
                                 />
                                 <img 
                                     src={bolda3} 
                                     alt="Decorative Ice Cream" 
                                     className='absolute h-[30px] w-[30px] sm:h-[40px] sm:w-[40px] md:h-[55px] md:w-[55px] lg:h-[75px] lg:w-[75px] 
-                                    top-[50%] left-[8%] sm:left-[4%] md:left-[5%] lg:left-[5%] transition-transform hover:scale-110 duration-300' 
+                                    top-[60%] left-[8%] sm:left-[4%] md:left-[5%] lg:left-[5%] transition-transform hover:scale-110 duration-300' 
                                 />
                                 <img 
                                     src={bolda4} 
                                     alt="Decorative Ice Cream" 
                                     className='absolute h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[65px] md:w-[65px] lg:h-[85px] lg:w-[85px] 
-                                    top-[60%] left-[10%] sm:left-[15%] md:left-[12%] lg:left-[15%] transition-transform hover:scale-110 duration-300' 
+                                    top-[70%] left-[10%] sm:left-[15%] md:left-[12%] lg:left-[15%] transition-transform hover:scale-110 duration-300' 
                                 />
                                 
                                 {/* Right side decorative images - positioned responsively */}
@@ -90,25 +90,25 @@ const ReviewPart = () => {
                                     src={bolda5} 
                                     alt="Decorative Ice Cream" 
                                     className='absolute h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[70px] md:w-[70px] lg:h-[90px] lg:w-[90px] 
-                                    top-[30%] right-[5%] sm:right-[10%] md:right-[15%] lg:right-[20%] transition-transform hover:scale-110 duration-300' 
+                                    top-[20%] right-[5%] sm:right-[10%] md:right-[15%] md:top-[10%] lg:right-[20%] transition-transform hover:scale-110 duration-300' 
                                 />
                                 <img 
                                     src={bolda6} 
                                     alt="Decorative Ice Cream" 
                                     className='absolute h-[35px] w-[35px] sm:h-[45px] sm:w-[45px] md:h-[60px] md:w-[60px] lg:h-[80px] lg:w-[80px] 
-                                    top-[40%] right-[2%] sm:right-[6%] md:right-[8%] lg:right-[12%] transition-transform hover:scale-110 duration-300' 
+                                    top-[50%] right-[2%] sm:right-[6%] md:right-[8%] lg:right-[12%] transition-transform hover:scale-110 duration-300' 
                                 />
                                 <img 
                                     src={bolda7} 
                                     alt="Decorative Ice Cream" 
                                     className='absolute h-[30px] w-[30px] sm:h-[40px] sm:w-[40px] md:h-[55px] md:w-[55px] lg:h-[75px] lg:w-[75px] 
-                                    top-[50%] right-[8%] sm:right-[4%] md:right-[5%] lg:right-[5%] transition-transform hover:scale-110 duration-300' 
+                                    top-[60%] right-[8%] sm:right-[4%] md:right-[5%] lg:right-[5%] transition-transform hover:scale-110 duration-300' 
                                 />
                                 <img 
                                     src={bolda8} 
                                     alt="Decorative Ice Cream" 
                                     className='absolute h-[40px] w-[40px] sm:h-[50px] sm:w-[50px] md:h-[65px] md:w-[65px] lg:h-[85px] lg:w-[85px] 
-                                    top-[60%] right-[10%] sm:right-[15%] md:right-[12%] lg:right-[15%] transition-transform hover:scale-110 duration-300' 
+                                    top-[70%] right-[10%] sm:right-[15%] md:right-[12%] lg:right-[15%] transition-transform hover:scale-110 duration-300' 
                                 />
                             </div>
                         </Flex>

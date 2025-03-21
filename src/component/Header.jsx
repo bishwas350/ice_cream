@@ -38,11 +38,15 @@ const Header = () => {
                   <Link to={"/"}>
                     <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Home</li>
                   </Link>
-                  <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Shop</li>
+                    <Link to={"/shop"}>
+                    <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Shop</li>
+                    </Link>
                   <Link to={"/about"}>
                     <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>About</li>
                   </Link>
-                  <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Blog</li>
+                  <Link to={"/Review"}>
+                  <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Review</li>
+                  </Link>
                   <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Faq's</li>
                 </Menu>
                 <button className='bg-[#F83D8E] flex items-center gap-2 py-4 px-6 rounded-full text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] dark:hover:shadow-[0_5px_15px_rgba(248,61,142,0.8)] mt-4'>
@@ -58,11 +62,15 @@ const Header = () => {
               <Link to={"/"}>
                 <li className='text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Home</li>
               </Link>
+              <Link to={"/shop"}>
               <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Shop</li>
+              </Link>
               <Link to={"/about"}>
                 <li className='text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>About</li>
               </Link>
-              <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Blog</li>
+              <Link to={"/review"}>
+              <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Review</li>
+              </Link>
               <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Faq's</li>
             </Menu>
             <div className="flex items-center gap-4">

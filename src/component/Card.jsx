@@ -76,7 +76,7 @@ const Card = () => {
                                             <div className="w-1/2">
                                                 <Flex className={'justify-end'}>
                                                     <div className="bg-[#683292] hover:bg-[#7c3eab] p-3 rounded-full transition-colors duration-300">
-                                                        <CiShoppingCart className='text-white text-2xl '/>
+                                                        <CiShoppingCart className='text-white text-2xl ' />
 
                                                     </div>
                                                 </Flex>
@@ -95,7 +95,7 @@ const Card = () => {
                                                     Cookie Cone</h2></div>
                                             <div className="w-[30%] ">
                                                 <Flex className={'justify-end items-center'}>
-                                                    <FaStar className='text-[#FBAB2A]'/>
+                                                    <FaStar className='text-[#FBAB2A]' />
                                                     <span className='text-[#0F0200] dark:text-white font-semibold font-apa transition-colors duration-300'>4.4</span>
                                                 </Flex></div>
                                         </div>
@@ -108,7 +108,7 @@ const Card = () => {
                                             <div className="w-1/2">
                                                 <Flex className={'justify-end'}>
                                                     <div className="bg-[#683292] hover:bg-[#7c3eab] p-3 rounded-full transition-colors duration-300">
-                                                        <CiShoppingCart className='text-white text-2xl'/>
+                                                        <CiShoppingCart className='text-white text-2xl' />
 
                                                     </div>
                                                 </Flex>
@@ -127,7 +127,7 @@ const Card = () => {
                                                     Cookie Cone</h2></div>
                                             <div className="w-[30%] ">
                                                 <Flex className={'justify-end items-center'}>
-                                                    <FaStar className='text-[#FBAB2A]'/>
+                                                    <FaStar className='text-[#FBAB2A]' />
                                                     <span className='text-[#0F0200] dark:text-white font-semibold font-apa transition-colors duration-300'>4.4</span>
                                                 </Flex></div>
                                         </div>
@@ -140,7 +140,7 @@ const Card = () => {
                                             <div className="w-1/2">
                                                 <Flex className={'justify-end'}>
                                                     <div className="bg-[#683292] hover:bg-[#7c3eab] p-3 rounded-full transition-colors duration-300">
-                                                        <CiShoppingCart className='text-white text-2xl'/>
+                                                        <CiShoppingCart className='text-white text-2xl' />
 
                                                     </div>
                                                 </Flex>

@@ -19,9 +19,9 @@ const Breadcrumb = () => {
                         breadcrumbPath +=`/${name}`;
                         const isLast = index === pathnames.length -1;
                         return isLast ? (
-                            <span key={breadcrumbPath}> /{name}</span>
+                            <span key={breadcrumbPath} className='text-[#999] pl-1.5'> /{name}</span>
                         ) :(
-                            <span key={breadcrumbPath}> /
+                            <span key={breadcrumbPath} className='text-[#999] pl-1.5'> /
                                 <Link to={breadcrumbPath}>{name}</Link>
                             </span>
                         )

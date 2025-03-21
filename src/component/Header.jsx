@@ -79,9 +79,11 @@ const Header = () => {
                 <CiSearch />
                 <BsBag />
               </div>
+              <a href="tel:+5689 2589 6325">
               <button className='bg-[#F83D8E] flex items-center gap-2 py-4 px-6 rounded-full text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] dark:hover:shadow-[0_5px_15px_rgba(248,61,142,0.8)] lg:py-3 lg:px-4 lg:text-base lg:text-wrap'>
                 Contact Us <FaLongArrowAltRight />
               </button>
+              </a>
             </div>
           </div>
         </Flex>

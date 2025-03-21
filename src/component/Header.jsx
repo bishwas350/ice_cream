@@ -73,7 +73,9 @@ const Header = () => {
               <Link to={"/review"}>
               <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Review</li>
               </Link>
+              <Link to={"/faq"}>
               <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Faq's</li>
+              </Link>
             </Menu>
             <div className="flex items-center gap-4">
               <ThemeToggle />

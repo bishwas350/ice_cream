@@ -7,6 +7,7 @@ import About from './pages/About'
 import Breadcrumb from './component/Breadcrumb'
 import Shop from './pages/Shop'
 import Review from './pages/Review'
+import Faq from './component/Faq'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/About' element ={<About/>}/>
           <Route path='/Shop' element ={<Shop/>}/>
           <Route path='/Review' element ={<Review/>}/>
+          <Route path='/Faq' element ={<Faq/>}/>
           <Route/>
         </Route>
       </Routes>

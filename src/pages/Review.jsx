@@ -96,7 +96,7 @@ const Review = () => {
                     <div className="slider-container mt-6">
                         <Slider {...settings}>
                             {reviewData.map((item, index) => (
-                                <div key={index} className="px-2">
+                                <div key={index} className="px-2 transform transition-transform hover:scale-95">
                                     <div className="rounded-[10px] p-3 dark:bg-gray-800 border-2 border-b-[#F83D8E]">
                                         <img src={review} alt="Review Background" className="" />
                                         <p className="dark:text-gray-300 text-[#646464] font-apa text-[16px] mt-3.5">

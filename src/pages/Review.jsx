@@ -4,6 +4,10 @@ import review from '../assets/img/rexiew.png';
 import reviewImg1 from '../assets/review/review img 1.png';
 import reviewImg2 from '../assets/review/review img 2.png';
 import reviewImg3 from '../assets/review/review img 3.png';
+import reviewImg4 from '../assets/review/review img 4.png';
+import reviewImg5 from '../assets/review/review img 5.png';
+import reviewImg6 from '../assets/review/review img 6.png';
+import reviewImg7 from '../assets/review/review img 7.png';
 import { FaStar } from 'react-icons/fa6';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -25,6 +29,26 @@ const Review = () => {
         {
             reviewImg: reviewImg3,
             name: 'Naurth Reough',
+            position: 'Happy Client',
+        },
+        {
+            reviewImg: reviewImg4,
+            name: 'Jenifer',
+            position: 'Happy Client',
+        },
+        {
+            reviewImg: reviewImg5,
+            name: 'James',
+            position: 'Happy Client',
+        },
+        {
+            reviewImg: reviewImg6,
+            name: 'Elizzabeth',
+            position: 'Happy Client',
+        },
+        {
+            reviewImg: reviewImg7,
+            name: 'Russel',
             position: 'Happy Client',
         },
     ];

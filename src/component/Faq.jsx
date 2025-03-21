@@ -63,6 +63,27 @@ const Faq = () => {
                                     Yes, we provide catering services for birthdays, weddings, and corporate events. Contact us to customize your ice cream bar or dessert table.
                                     </AccordionContent>
                                 </AccordionItem>
+                                <AccordionItem value="item-8">
+                                    <AccordionTrigger>8. What are your opening hours?
+                                    </AccordionTrigger>
+                                    <AccordionContent>
+                                    Our ice cream parlor is open daily from 10 AM to 10 PM. Online orders are accepted 24/7.
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-9">
+                                    <AccordionTrigger>9. Can I buy gift cards?
+                                    </AccordionTrigger>
+                                    <AccordionContent>
+                                    Yes! We offer digital and physical gift cards that make the perfect treat for ice cream lovers.
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-10">
+                                    <AccordionTrigger>10. How can I contact customer support?
+                                    </AccordionTrigger>
+                                    <AccordionContent>
+                                    You can reach us via email at info@icedelights.com or call us at +5689 2589 6325 for any inquiries.
+                                    </AccordionContent>
+                                </AccordionItem>
                             </Accordion>
 
                         </div>

@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Rootlayout from './pages/layout/Rootlayout'
 import About from './pages/About'
+import Breadcrumb from './component/Breadcrumb'
 
 function App() {
 

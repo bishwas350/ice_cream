@@ -9,6 +9,7 @@
     --font-apa:"Archivo";
     --font-brad:"Berkshire Swash";
     --background-image-bannerBg: url("./assets/img/banner.png");
+    --background-image-AboutBg: url("./assets/img/aboutbg.png");
     /* --color-lalal: 'linear-gradient(90deg, hsla(300, 43%, 89%, 1) 8%, hsla(206, 54%, 97%, 1) 43%, hsla(23, 62%, 93%, 1) 64%, hsla(184, 56%, 95%, 1) 87%)'; */
 }
 

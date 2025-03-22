@@ -75,17 +75,17 @@ const TeamsPart = () => {
                                 <p className='text-[#646464] dark:text-gray-300 font-apa text-center'>{item.position}</p>
                             </div>
                             <div className="flex justify-center gap-2 py-3">
-                                <div className="rounded-full bg-[#F83D8E] inline-block p-2 " >
+                                <div className="rounded-full bg-[#F83D8E] inline-block p-2 dark:text-[#eeeeff] text-[#fffafa]" >
                                     <a href="#">
                                 <FaFacebookF />
                                     </a>
                                 </div>
-                                <div className="rounded-full bg-[#F83D8E] inline-block p-2">
+                                <div className="rounded-full bg-[#F83D8E] inline-block p-2 dark:text-[#eeeeff] text-[#fffafa]">
                                 <a href="#">
                                 <FaInstagram />
                                 </a>
                                 </div>
-                                <div className="rounded-full bg-[#F83D8E] inline-block p-2">
+                                <div className="rounded-full bg-[#F83D8E] inline-block p-2 dark:text-[#eeeeff] text-[#fffafa]">
                                 <a href="#">
                                 <FaYoutube />
                                 </a>

@@ -18,7 +18,9 @@ const Header = () => {
       <Container>
         <Flex className={"justify-center items-center w-full relative"}>
           <div className='lg:hidden flex items-center gap-5 w-full justify-between py-3'>
-            <img src={logo} alt="logo" className=''/>
+              <Link to={"/"}>
+              <img src={logo} alt="logo" className=''/>
+              </Link>
             <button className='lg:hidden mr-6' onClick={() => setOpen(!open)}>
               {open ? (
                 <IoCloseOutline className='text-2xl text-[#F83D8E]' />
@@ -61,7 +63,9 @@ const Header = () => {
           )}
 
           <div className='hidden lg:flex items-center gap-14 py-3 w-full justify-between'>
-            <img src={logo} alt="logo" className=''/>
+          <Link to={"/"}>
+          <img src={logo} alt="logo" className=''/>
+          </Link>
             <Menu className={"hidden lg:flex items-center gap-12"}>
               <Link to={"/"}>
                 <li className='text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Home</li>

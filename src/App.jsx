@@ -8,6 +8,7 @@ import Breadcrumb from './component/Breadcrumb'
 import Shop from './pages/Shop'
 import Review from './pages/Review'
 import Faq from './component/Faq'
+import Error from './component/Error'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <>
       <Routes>
         <Route element ={<Rootlayout/>}>
+          <Route path='*' element ={<Error/>}/>
           <Route path='/' element ={<Home/>}/>
           <Route path='/About' element ={<About/>}/>
           <Route path='/Shop' element ={<Shop/>}/>

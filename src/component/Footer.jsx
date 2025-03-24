@@ -2,7 +2,6 @@ import React from 'react'
 import Container from './Container'
 import Flex from './Flex'
 import logo from '../assets/img/Group 2.png'
-import add from '../assets/img/Overlay.png'
 import { IoLocationSharp } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";

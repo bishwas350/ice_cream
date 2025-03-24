@@ -19,7 +19,7 @@ const Header = () => {
         <Flex className={"justify-center items-center w-full relative"}>
           <div className='lg:hidden flex items-center gap-5 w-full justify-between py-3'>
             <img src={logo} alt="logo" className=''/>
-            <button className='lg:hidden' onClick={() => setOpen(!open)}>
+            <button className='lg:hidden mr-6' onClick={() => setOpen(!open)}>
               {open ? (
                 <IoCloseOutline className='text-2xl text-[#F83D8E]' />
               ) : (

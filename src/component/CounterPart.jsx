@@ -59,7 +59,7 @@ const CounterPart = () => {
                             <div className="bg-[#ffffee] dark:bg-gray-800 rounded-[10px] p-4 border-b-2 border-[#F83D8E]">
                                 <div className="text-center">
                                     <h1 className='font-brad text-2xl text-[#0F0200] dark:text-[#ffffee]'>{counter ? <CountUp end={48} duration={5} start={0} delay={0} /> : "0"} <span className='text-[#F83D8E]'>+</span></h1>
-                                    <p className="font-apa text-[#646464] dark:text-gray-300">Years of Experience</p>
+                                    <p className="font-apa text-[#646464] dark:text-gray-300">Years of<br className='md:hidden'/> Experience</p>
                                 </div>
                             </div>
                             <div className="bg-[#ffffee] dark:bg-gray-800 rounded-[10px] p-4 border-b-2 border-[#F83D8E]">

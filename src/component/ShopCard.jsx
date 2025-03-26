@@ -6,13 +6,13 @@ import { BsGrid, BsListUl } from "react-icons/bs";
 import Flex from './Flex';
 import Container from './Container';
 
-import {  Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Productdata } from './Productdata';
 const ShopCard = () => {
     const [viewMode, setViewMode] = useState('grid');
     const [currentPage, setCurrentPage] = useState(1);
     const [productsPerPage] = useState(6);
-    
+
 
     const indexLastProduct = currentPage * productsPerPage;
     const indexFirstProduct = indexLastProduct - productsPerPage;
@@ -94,7 +94,9 @@ const ShopCard = () => {
                                                     <div className="flex justify-between items-center mb-2">
                                                         <div className="w-[70%]">
                                                             <Link to={`/products/${item.id}`}>
-                                                            <h2 className='font-bold font-apa text-lg leading-6 dark:text-white transition-colors duration-300'>{item.title}</h2>
+                                                                <h2 className='font-bold font-apa text-lg leading-6 dark:text-white transition-colors duration-300'>{item.title.length > 20
+                                                                    ? `${item.title.slice(0, 10)}...`
+                                                                    : item.title}</h2>
                                                             </Link>
                                                         </div>
                                                         <div className="w-[30%]">
@@ -104,7 +106,9 @@ const ShopCard = () => {
                                                             </Flex>
                                                         </div>
                                                     </div>
-                                                    <p className='text-[#646464] dark:text-gray-400 font-apa transition-colors duration-300 mt-2 mb-3'>{item.discription}</p>
+                                                    <p className='text-[#646464] dark:text-gray-400 font-apa transition-colors duration-300 mt-2 mb-3'>{item.discription.length > 20
+                                                                    ? `${item.discription.slice(0, 10)}...`
+                                                                    : item.discription}</p>
                                                     <div className="flex items-center">
                                                         <div className="w-1/2">
                                                             <span className='font-apa font-bold text-lg text-[#F83D8E]'>${item.price}</span>
@@ -124,15 +128,15 @@ const ShopCard = () => {
                                 </div>
                             </div>
                         </div>
-                            <div className="flex justify-center mt-5 mb-5 ">
-                                {
-                                    Array.from({ length: Math.ceil(Productdata.length / productsPerPage) }, (_, i) => (
-                                        <button key={i} onClick={() => paginate(i + 1)} className={`px-4  py-2 mx-1 ${currentPage === i + 1 ? "bg-[#683292] text-white rounded-[5px]" : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border rounded-[5px]"} `}>
-                                            {i + 1}
-                                        </button>
-                                    ))
-                                }
-                            </div>
+                        <div className="flex justify-center mt-5 mb-5 ">
+                            {
+                                Array.from({ length: Math.ceil(Productdata.length / productsPerPage) }, (_, i) => (
+                                    <button key={i} onClick={() => paginate(i + 1)} className={`px-4  py-2 mx-1 ${currentPage === i + 1 ? "bg-[#683292] text-white rounded-[5px]" : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border rounded-[5px]"} `}>
+                                        {i + 1}
+                                    </button>
+                                ))
+                            }
+                        </div>
                     </Container>
                 </div>
             </main>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from './Container'
 import { useParams } from 'react-router-dom'
-import { productData } from './ShopCard' // Adjust path if needed
+
 import { FaStar } from "react-icons/fa";
 import { Productdata } from './Productdata';
 

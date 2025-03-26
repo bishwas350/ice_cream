@@ -6,7 +6,7 @@ import { BsGrid, BsListUl } from "react-icons/bs";
 import Flex from './Flex';
 import Container from './Container';
 
-import { data, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import { Productdata } from './Productdata';
 const ShopCard = () => {
     const [viewMode, setViewMode] = useState('grid');
@@ -126,7 +126,7 @@ const ShopCard = () => {
                         </div>
                             <div className="flex justify-center mt-5 mb-5 ">
                                 {
-                                    Array.from({ length: Math.ceil(data.length / productsPerPage) }, (_, i) => (
+                                    Array.from({ length: Math.ceil(Productdata.length / productsPerPage) }, (_, i) => (
                                         <button key={i} onClick={() => paginate(i + 1)} className={`px-4  py-2 mx-1 ${currentPage === i + 1 ? "bg-[#683292] text-white rounded-[5px]" : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border rounded-[5px]"} `}>
                                             {i + 1}
                                         </button>
@@ -141,4 +141,4 @@ const ShopCard = () => {
 }
 
 export default ShopCard
-export const productData = data;
+

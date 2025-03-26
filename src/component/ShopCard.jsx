@@ -15,12 +15,14 @@ import img7 from '../assets/img/shop-img7.png'
 import img8 from '../assets/img/shop-img8.png'
 import img9 from '../assets/img/shop-img9.png'
 import img10 from '../assets/img/shop-img10.png'
+import { data } from 'react-router-dom';
 const ShopCard = () => {
     const [viewMode, setViewMode] = useState('grid');
     const [currentPage, setCurrentPage] = useState(1);
     const [productsPerPage] = useState(6);
     const data = [
         {
+            id:1,
             img: img1,
             title: 'Chocolate Chip Cookie Cone',
             discription: "Creamy vanilla ice cream topped with cherry.",
@@ -28,6 +30,7 @@ const ShopCard = () => {
             price: 4.45,
         },
         {
+            id:2,
             img: img2,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
@@ -35,6 +38,7 @@ const ShopCard = () => {
             discription: "Rich chocolate ice cream with chunks of brownie."
         },
         {
+            id:3,
             img: img3,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
@@ -42,6 +46,8 @@ const ShopCard = () => {
             discription: "Strawberry ice cream layered with shortcake"
         },
         {
+
+            id:4,
             img: img4,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
@@ -49,6 +55,7 @@ const ShopCard = () => {
             discription: "Refreshing mint ice cream with chocolate chips."
         },
         {
+            id:5,
             img: img5,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
@@ -56,6 +63,7 @@ const ShopCard = () => {
             discription: "Strawberry ice cream with fresh strawberries"
         },
         {
+            id:6,
             img: img6,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
@@ -63,6 +71,7 @@ const ShopCard = () => {
             discription: "Chocolate chip cookie dough ice cream in a cone."
         },
         {
+            id:7,
             img: img7,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
@@ -70,6 +79,7 @@ const ShopCard = () => {
             discription: "Vanilla ice cream with chocolate chips."
         },
         {
+            id:8,
             img: img8,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
@@ -77,6 +87,7 @@ const ShopCard = () => {
             discription: "Vanilla ice cream with chocolate chips."
         },
         {
+            id:9,
             img: img9,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
@@ -84,6 +95,7 @@ const ShopCard = () => {
             discription: "Vanilla ice cream with chocolate chips."
         },
         {
+            id:10,
             img: img10,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
@@ -217,3 +229,4 @@ const ShopCard = () => {
 }
 
 export default ShopCard
+export  {data};

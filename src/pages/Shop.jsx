@@ -1,8 +1,11 @@
 import React from 'react'
+import ShopCard from '../component/ShopCard'
 
 const Shop = () => {
   return (
-    <div>Shop part</div>
+  <>
+  <ShopCard/>
+  </>
   )
 }
 

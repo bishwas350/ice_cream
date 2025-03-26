@@ -17,6 +17,8 @@ import img9 from '../assets/img/shop-img9.png'
 import img10 from '../assets/img/shop-img10.png'
 const ShopCard = () => {
     const [viewMode, setViewMode] = useState('grid');
+    const [currentPage, setCurrentPage] = useState(1);
+    const [productsPerPage] = useState(6);
     const data = [
         {
             img: img1,
@@ -30,65 +32,70 @@ const ShopCard = () => {
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
             price: 4.45,
-            discription:"Rich chocolate ice cream with chunks of brownie."
+            discription: "Rich chocolate ice cream with chunks of brownie."
         },
         {
             img: img3,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
             price: 4.45,
-            discription:"Strawberry ice cream layered with shortcake"
+            discription: "Strawberry ice cream layered with shortcake"
         },
         {
             img: img4,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
             price: 4.45,
-            discription:"Refreshing mint ice cream with chocolate chips."
+            discription: "Refreshing mint ice cream with chocolate chips."
         },
         {
             img: img5,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
             price: 4.45,
-            discription:"Strawberry ice cream with fresh strawberries"
+            discription: "Strawberry ice cream with fresh strawberries"
         },
         {
             img: img6,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
             price: 4.45,
-            discription:"Chocolate chip cookie dough ice cream in a cone."
+            discription: "Chocolate chip cookie dough ice cream in a cone."
         },
         {
             img: img7,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
             price: 4.45,
-            discription:"Vanilla ice cream with chocolate chips."
+            discription: "Vanilla ice cream with chocolate chips."
         },
         {
             img: img8,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
             price: 4.45,
-            discription:"Vanilla ice cream with chocolate chips."
+            discription: "Vanilla ice cream with chocolate chips."
         },
         {
             img: img9,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
             price: 4.45,
-            discription:"Vanilla ice cream with chocolate chips."
+            discription: "Vanilla ice cream with chocolate chips."
         },
         {
             img: img10,
             title: 'Chocolate Chip Cookie Cone',
             rating: 4.4,
             price: 4.45,
-            discription:"Vanilla ice cream with chocolate chips."
+            discription: "Vanilla ice cream with chocolate chips."
         },
     ]
+
+    const indexLastProduct = currentPage * productsPerPage;
+    const indexFirstProduct = indexLastProduct - productsPerPage;
+    const currentProducts = data.slice(indexFirstProduct, indexLastProduct);
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
     return (
         <>
             <main className="py-8">
@@ -155,7 +162,7 @@ const ShopCard = () => {
                             {/* Main Content */}
                             <div className="w-full md:w-[75%]">
                                 <div className={`${viewMode === 'grid' ? 'grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4' : 'flex flex-col gap-4'}`}>
-                                    {data.map((item, index) => (
+                                    {currentProducts.map((item, index) => (
                                         <div key={index} className={`rounded-[10px] bg-white dark:bg-gray-800 p-4 shadow-sm transition-colors duration-300`}>
                                             <div className={`${viewMode === 'list' ? 'flex items-center' : ''}`}>
                                                 <div className={`${viewMode === 'list' ? 'w-1/4 pr-4' : 'flex justify-center mb-4'}`}>
@@ -193,6 +200,15 @@ const ShopCard = () => {
                                 </div>
                             </div>
                         </div>
+                            <div className="flex justify-center mt-5 mb-5 ">
+                                {
+                                    Array.from({ length: Math.ceil(data.length / productsPerPage) }, (_, i) => (
+                                        <button key={i} onClick={() => paginate(i + 1)} className={`px-4  py-2 mx-1 ${currentPage === i + 1 ? "bg-[#683292] text-white rounded-[5px]" : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border rounded-[5px]"} `}>
+                                            {i + 1}
+                                        </button>
+                                    ))
+                                }
+                            </div>
                     </Container>
                 </div>
             </main>
@@ -201,4 +217,3 @@ const ShopCard = () => {
 }
 
 export default ShopCard
-                

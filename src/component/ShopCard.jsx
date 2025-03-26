@@ -5,108 +5,18 @@ import { FaStar } from "react-icons/fa";
 import { BsGrid, BsListUl } from "react-icons/bs";
 import Flex from './Flex';
 import Container from './Container';
-import img1 from '../assets/img/shop-img1.png'
-import img2 from '../assets/img/shop-img2.png'
-import img3 from '../assets/img/shop-img3.png'
-import img4 from '../assets/img/shop-img4.png'
-import img5 from '../assets/img/shop-img5.png'
-import img6 from '../assets/img/shop-img6.png'
-import img7 from '../assets/img/shop-img7.png'
-import img8 from '../assets/img/shop-img8.png'
-import img9 from '../assets/img/shop-img9.png'
-import img10 from '../assets/img/shop-img10.png'
-import { data } from 'react-router-dom';
+
+import { data, Link } from 'react-router-dom';
+import { Productdata } from './Productdata';
 const ShopCard = () => {
     const [viewMode, setViewMode] = useState('grid');
     const [currentPage, setCurrentPage] = useState(1);
     const [productsPerPage] = useState(6);
-    const data = [
-        {
-            id:1,
-            img: img1,
-            title: 'Chocolate Chip Cookie Cone',
-            discription: "Creamy vanilla ice cream topped with cherry.",
-            rating: 4.4,
-            price: 4.45,
-        },
-        {
-            id:2,
-            img: img2,
-            title: 'Chocolate Chip Cookie Cone',
-            rating: 4.4,
-            price: 4.45,
-            discription: "Rich chocolate ice cream with chunks of brownie."
-        },
-        {
-            id:3,
-            img: img3,
-            title: 'Chocolate Chip Cookie Cone',
-            rating: 4.4,
-            price: 4.45,
-            discription: "Strawberry ice cream layered with shortcake"
-        },
-        {
-
-            id:4,
-            img: img4,
-            title: 'Chocolate Chip Cookie Cone',
-            rating: 4.4,
-            price: 4.45,
-            discription: "Refreshing mint ice cream with chocolate chips."
-        },
-        {
-            id:5,
-            img: img5,
-            title: 'Chocolate Chip Cookie Cone',
-            rating: 4.4,
-            price: 4.45,
-            discription: "Strawberry ice cream with fresh strawberries"
-        },
-        {
-            id:6,
-            img: img6,
-            title: 'Chocolate Chip Cookie Cone',
-            rating: 4.4,
-            price: 4.45,
-            discription: "Chocolate chip cookie dough ice cream in a cone."
-        },
-        {
-            id:7,
-            img: img7,
-            title: 'Chocolate Chip Cookie Cone',
-            rating: 4.4,
-            price: 4.45,
-            discription: "Vanilla ice cream with chocolate chips."
-        },
-        {
-            id:8,
-            img: img8,
-            title: 'Chocolate Chip Cookie Cone',
-            rating: 4.4,
-            price: 4.45,
-            discription: "Vanilla ice cream with chocolate chips."
-        },
-        {
-            id:9,
-            img: img9,
-            title: 'Chocolate Chip Cookie Cone',
-            rating: 4.4,
-            price: 4.45,
-            discription: "Vanilla ice cream with chocolate chips."
-        },
-        {
-            id:10,
-            img: img10,
-            title: 'Chocolate Chip Cookie Cone',
-            rating: 4.4,
-            price: 4.45,
-            discription: "Vanilla ice cream with chocolate chips."
-        },
-    ]
+    
 
     const indexLastProduct = currentPage * productsPerPage;
     const indexFirstProduct = indexLastProduct - productsPerPage;
-    const currentProducts = data.slice(indexFirstProduct, indexLastProduct);
+    const currentProducts = Productdata.slice(indexFirstProduct, indexLastProduct);
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
     return (
         <>
@@ -183,7 +93,9 @@ const ShopCard = () => {
                                                 <div className={`${viewMode === 'list' ? 'w-3/4' : ''}`}>
                                                     <div className="flex justify-between items-center mb-2">
                                                         <div className="w-[70%]">
+                                                            <Link to={`/products/${item.id}`}>
                                                             <h2 className='font-bold font-apa text-lg leading-6 dark:text-white transition-colors duration-300'>{item.title}</h2>
+                                                            </Link>
                                                         </div>
                                                         <div className="w-[30%]">
                                                             <Flex className={'justify-end items-center'}>
@@ -229,4 +141,4 @@ const ShopCard = () => {
 }
 
 export default ShopCard
-export  {data};
+export const productData = data;

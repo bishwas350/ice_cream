@@ -9,6 +9,7 @@ import Shop from './pages/Shop'
 import Review from './pages/Review'
 import Faq from './component/Faq'
 import Error from './component/Error'
+import ProductDetails from './component/ProductDetails'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/Shop' element ={<Shop/>}/>
           <Route path='/Review' element ={<Review/>}/>
           <Route path='/Faq' element ={<Faq/>}/>
+          <Route path='/products/:id' element ={<ProductDetails/>}/>
           <Route/>
         </Route>
       </Routes>

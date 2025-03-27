@@ -14,6 +14,7 @@ import './slick-custom.css';
 import Flex from './Flex';
 import { Target } from 'lucide-react';
 const ProductDetails = () => {
+  const [activeTab, setActiveTab] = useState(0)
   const [count, setCount] = useState(0);
   const { id } = useParams();
   const relatedProducts = Productdata.filter(item =>
@@ -63,12 +64,83 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
+        <div className="">
+          <div>
+            <ul className="flex flex-wrap gap-3 mt-7 mb-[42px] text-[#0F0200] font-apa font-bold dark:text-white ">
+              <li className="py-3"><button className={`cursor-pointer ${activeTab === 0 ? 'text-[#F83D8E]  border-b-4 border-[#F83D8E]' : ''}`} onClick={() => setActiveTab(0)}>Description</button></li>
+              <li className="py-3"><button className={`cursor-pointer ${activeTab === 1 ? 'text-[#F83D8E] border-b-4 border-[#F83D8E]' : ''}`} onClick={() => setActiveTab(1)}>Additional info</button></li>
+              <li className="py-3"><button className={`cursor-pointer ${activeTab === 2 ? 'text-[#F83D8E] border-b-4 border-[#F83D8E]' : ''}`} onClick={() => setActiveTab(2)}>Reviews (5)</button></li>
+            </ul>
+
+            {/* Description Tab Content  */}
+            {
+              activeTab == 0 && (
+                <div className="">Indulge in the rich, creamy taste of our Classic Vanilla Ice Cream, made from premium vanilla beans and fresh dairy. Each scoop delivers a smooth and velvety texture, perfectly balanced with a touch of natural sweetness. Whether enjoyed on its own or paired with your favorite desserts, this classic treat is sure to satisfy your cravings.
+
+                </div>
+              )
+            }
+
+            {/* Additional info Tab Content  */}
+            {
+              activeTab === 1 && (
+                <div className="">
+                  <ul className='text-[#646464] dark:text-gray-400 font-apa space-y-4'>
+                    <li>Ingredients: Fresh milk, sugar, vanilla extract, cream, stabilizers</li>
+                    <li>Allergen Info: Contains dairy
+                    </li>
+                    <li>Storage: Keep frozen at -18°C (0°F)
+
+                    </li>
+                    <li>
+                    Net Weight: 500ml
+                    </li>
+                    <li>
+                    Shelf Life: 6 months from the manufacturing date
+                    </li>
+                  </ul>
+                </div>
+              )
+            }
+
+            {/* Reviews Tab Content  */}
+            {
+              activeTab === 2 && (
+                <div className="">
+                 <ul className='text-[#646464] dark:text-gray-400 font-apa space-y-4'>
+                  <li>
+                  ⭐⭐⭐⭐⭐ Emily R. (Verified Buyer)
+                  "This vanilla ice cream is an absolute delight! The texture is incredibly smooth, and the flavor is rich without being overly sweet. It tastes like real vanilla beans, not artificial flavoring. Definitely a staple in my freezer!"
+                  </li>
+                  <li>
+                  ⭐⭐⭐⭐⭐ Michael T. (Verified Buyer)
+                  "Hands down, the creamiest and most flavorful vanilla ice cream I’ve ever had! It melts beautifully in your mouth and pairs perfectly with brownies or apple pie. Will be buying again!"
+                  </li>
+                  <li>
+                  ⭐⭐⭐⭐ Sophia L. (Verified Buyer)
+                  "Loved the taste, but I wish the container was bigger! It’s so good that it disappears too quickly in my household. Highly recommend if you’re a vanilla lover!"
+                  </li>
+                  <li>
+                  ⭐⭐⭐⭐⭐ David P. (Verified Buyer)
+                  "Perfect for making milkshakes! I used this with some fresh strawberries, and it blended into the smoothest, most flavorful shake ever. The quality is top-notch!"
+                  </li>
+                  <li>
+                  ⭐⭐⭐⭐⭐ Olivia M. (Verified Buyer)
+                  "I was skeptical at first, but this ice cream exceeded my expectations. It has a perfect balance of creaminess and a deep vanilla flavor. Tastes just like homemade!"
+                  </li>
+                 </ul>
+                </div>
+              )
+            }
+
+          </div>
+        </div>
         <div className="mt-12 px-4">
           <div className="text-center mb-8">
             <h2 className='font-brad text-[#0F0200] text-2xl md:text-4xl lg:text-6xl dark:text-white transition-colors duration-300'>Related <span className='text-[#F83D8E]'>Products</span></h2>
             <p className='font-apa leading-7 text-sm text-[#646464] dark:text-gray-400 transition-colors duration-300'>Choose from some of related products</p>
           </div>
-          
+
           <Slider
             dots={true}
             infinite={true}
@@ -97,8 +169,8 @@ const ProductDetails = () => {
               <div key={index} className="px-4">
                 <Link to={`/products/${item.id} `} target='_blank' className="block">
                   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 transition-all duration-300 hover:shadow-lg">
-                    <img 
-                      src={item.img} 
+                    <img
+                      src={item.img}
                       alt={item.title}
                       className="w-full h-48 object-contain mb-4"
                     />

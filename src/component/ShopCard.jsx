@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CiShoppingCart } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";``
 import IceCream from '../assets/img/choco.png'
 import { FaStar } from "react-icons/fa";
 import { BsGrid, BsListUl } from "react-icons/bs";
@@ -107,8 +107,8 @@ const ShopCard = () => {
                                                         </div>
                                                     </div>
                                                     <p className='text-[#646464] dark:text-gray-400 font-apa transition-colors duration-300 mt-2 mb-3'>{item.discription.length > 20
-                                                                    ? `${item.discription.slice(0, 10)}...`
-                                                                    : item.discription}</p>
+                                                        ? `${item.discription.slice(0, 10)}...`
+                                                        : item.discription}</p>
                                                     <div className="flex items-center">
                                                         <div className="w-1/2">
                                                             <span className='font-apa font-bold text-lg text-[#F83D8E]'>${item.price}</span>

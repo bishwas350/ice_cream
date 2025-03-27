@@ -8,6 +8,8 @@ import img7 from '../assets/img/shop-img7.png'
 import img8 from '../assets/img/shop-img8.png'
 import img9 from '../assets/img/shop-img9.png'
 import img10 from '../assets/img/shop-img10.png'
+import img11 from '../assets/img/shop-img11.png'
+import img12 from '../assets/img/shop-img12.png'
 export const Productdata = [
     {
         id:1,
@@ -85,6 +87,22 @@ export const Productdata = [
     {
         id:10,
         img: img10,
+        title: 'Chocolate Chip Cookie Cone',
+        rating: 4.4,
+        price: 4.45,
+        discription: "Vanilla ice cream with chocolate chips."
+    },
+    {
+        id:11,
+        img: img11,
+        title: 'Chocolate Chip Cookie Cone',
+        rating: 4.4,
+        price: 4.45,
+        discription: "Vanilla ice cream with chocolate chips."
+    },
+    {
+        id:12,
+        img: img12,
         title: 'Chocolate Chip Cookie Cone',
         rating: 4.4,
         price: 4.45,

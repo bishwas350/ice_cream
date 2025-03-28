@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from './Container';
 import Flex from './Flex';
 import Menu from './Menu';
@@ -12,15 +12,16 @@ import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/theme-toggle';
 
 const Header = () => {
+  
   const [open, setOpen] = useState(false);
   return (
     <div className="md:py-1 bg-white dark:bg-gray-900 border-b-2 border-[#F83D8E]">
       <Container>
         <Flex className={"justify-center items-center w-full relative"}>
           <div className='lg:hidden flex items-center gap-5 w-full justify-between py-3'>
-              <Link to={"/"}>
-              <img src={logo} alt="logo" className=''/>
-              </Link>
+            <Link to={"/"}>
+              <img src={logo} alt="logo" className='' />
+            </Link>
             <button className='lg:hidden mr-6' onClick={() => setOpen(!open)}>
               {open ? (
                 <IoCloseOutline className='text-2xl text-[#F83D8E]' />
@@ -40,47 +41,47 @@ const Header = () => {
                   <Link to={"/"}>
                     <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Home</li>
                   </Link>
-                    <Link to={"/shop"}>
+                  <Link to={"/shop"}>
                     <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Shop</li>
-                    </Link>
+                  </Link>
                   <Link to={"/about"}>
                     <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>About</li>
                   </Link>
                   <Link to={"/Review"}>
-                  <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Review</li>
+                    <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Review</li>
                   </Link>
                   <Link to={"/faq"}>
-                  <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Faq's</li>
+                    <li className='text-xl text-[#0F0200] dark:text-white leading-4 font-apa hover:text-2xl hover:text-[#F83D8E] dark:hover:text-[#F83D8E] duration-300'>Faq's</li>
                   </Link>
                 </Menu>
                 <a href="tel:+5689 2589 6325">
-                <button className='bg-[#F83D8E] flex items-center gap-2 py-4 px-6 rounded-full text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] dark:hover:shadow-[0_5px_15px_rgba(248,61,142,0.8)] mt-4'>
-                  Contact Us <FaLongArrowAltRight />
-                </button>
+                  <button className='bg-[#F83D8E] flex items-center gap-2 py-4 px-6 rounded-full text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] dark:hover:shadow-[0_5px_15px_rgba(248,61,142,0.8)] mt-4'>
+                    Contact Us <FaLongArrowAltRight />
+                  </button>
                 </a>
               </div>
             </div>
           )}
 
           <div className='hidden lg:flex items-center gap-14 py-3 w-full justify-between'>
-          <Link to={"/"}>
-          <img src={logo} alt="logo" className=''/>
-          </Link>
+            <Link to={"/"}>
+              <img src={logo} alt="logo" className='' />
+            </Link>
             <Menu className={"hidden lg:flex items-center gap-12"}>
               <Link to={"/"}>
                 <li className='text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Home</li>
               </Link>
               <Link to={"/shop"}>
-              <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Shop</li>
+                <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Shop</li>
               </Link>
               <Link to={"/about"}>
                 <li className='text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>About</li>
               </Link>
               <Link to={"/review"}>
-              <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Review</li>
+                <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Review</li>
               </Link>
               <Link to={"/faq"}>
-              <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Faq's</li>
+                <li className='cursor-pointer text-[16px] text-[#0F0200] dark:text-white font-apa leading-4 hover:text-[#F83D8E] dark:hover:text-[#F83D8E]'>Faq's</li>
               </Link>
             </Menu>
             <div className="flex items-center gap-4">
@@ -90,9 +91,9 @@ const Header = () => {
                 <BsBag />
               </div>
               <a href="tel:+5689 2589 6325">
-              <button className='bg-[#F83D8E] flex items-center gap-2 py-4 px-6 rounded-full text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] dark:hover:shadow-[0_5px_15px_rgba(248,61,142,0.8)] lg:py-3 lg:px-4 lg:text-base lg:text-wrap'>
-                Contact Us <FaLongArrowAltRight />
-              </button>
+                <button className='bg-[#F83D8E] flex items-center gap-2 py-4 px-6 rounded-full text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] dark:hover:shadow-[0_5px_15px_rgba(248,61,142,0.8)] lg:py-3 lg:px-4 lg:text-base lg:text-wrap'>
+                  Contact Us <FaLongArrowAltRight />
+                </button>
               </a>
             </div>
           </div>

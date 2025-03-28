@@ -10,11 +10,13 @@ import Review from './pages/Review'
 import Faq from './component/Faq'
 import Error from './component/Error'
 import ProductDetails from './component/ProductDetails'
+import BackToTopButton from './component/BackToTopButton'
 
 function App() {
 
   return (
     <>
+    <BackToTopButton/>
       <Routes>
         <Route element ={<Rootlayout/>}>
           <Route path='*' element ={<Error/>}/>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { CiShoppingCart } from "react-icons/ci";``
+import  { useEffect, useState } from 'react'
+import { CiShoppingCart } from "react-icons/ci"; ``
 import IceCream from '../assets/img/choco.png'
 import { FaStar } from "react-icons/fa";
 import { BsGrid, BsListUl } from "react-icons/bs";
@@ -8,7 +8,10 @@ import Container from './Container';
 
 import { Link } from 'react-router-dom';
 import { Productdata } from './Productdata';
+import LiveSearchFilter from './LiveSearchFilter';
 const ShopCard = () => {
+    // Scroll to top when the component loads
+   
     const [viewMode, setViewMode] = useState('grid');
     const [currentPage, setCurrentPage] = useState(1);
     const [productsPerPage] = useState(6);
@@ -17,7 +20,13 @@ const ShopCard = () => {
     const indexLastProduct = currentPage * productsPerPage;
     const indexFirstProduct = indexLastProduct - productsPerPage;
     const currentProducts = Productdata.slice(indexFirstProduct, indexLastProduct);
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    };
     return (
         <>
             <main className="py-8">
@@ -51,6 +60,12 @@ const ShopCard = () => {
                                     <div className="mb-4">
                                         <h4 className="font-semibold mb-2 dark:text-white">Categories</h4>
                                         <div className="space-y-2">
+                                            <div className="">
+                                                <input type="text"
+
+                                                />
+
+                                            </div>
                                             <div className="flex items-center">
                                                 <input type="checkbox" id="cones" className="mr-2" />
                                                 <label htmlFor="cones" className="text-gray-700 dark:text-gray-300">Cones</label>

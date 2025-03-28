@@ -14,8 +14,7 @@ import './slick-custom.css';
 import Flex from './Flex';
 import { Target } from 'lucide-react';
 const ProductDetails = () => {
-  const [activeTab, setActiveTab] = useState(0)
-  const [count, setCount] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
   const { id } = useParams();
   const relatedProducts = Productdata.filter(item =>
     item.id !== parseInt(id)

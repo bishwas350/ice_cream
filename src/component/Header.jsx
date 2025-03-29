@@ -10,25 +10,38 @@ import { CiSearch } from "react-icons/ci";
 import { BsBag } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/theme-toggle';
+import { useCart } from './CartContext';
+import { BiMenuAltLeft } from "react-icons/bi";
 
 const Header = () => {
-  
+  const { cartCount } = useCart(); // Get total items in cart
+
   const [open, setOpen] = useState(false);
   return (
     <div className="md:py-1 bg-white dark:bg-gray-900 border-b-2 border-[#F83D8E]">
       <Container>
         <Flex className={"justify-center items-center w-full relative"}>
           <div className='lg:hidden flex items-center gap-5 w-full justify-between py-3'>
-            <Link to={"/"}>
-              <img src={logo} alt="logo" className='' />
-            </Link>
-            <button className='lg:hidden mr-6' onClick={() => setOpen(!open)}>
+          <button className='lg:hidden ml-6' onClick={() => setOpen(!open)}>
               {open ? (
                 <IoCloseOutline className='text-2xl text-[#F83D8E]' />
               ) : (
-                <CiMenuFries className='text-2xl text-[#F83D8E]' />
+                <BiMenuAltLeft  className='text-2xl text-[#F83D8E]' />
               )}
             </button>
+            <Link to={"/"}>
+              <img src={logo} alt="logo" className='' />
+            </Link>
+
+            <Link to={"/cart"} className='relative mr-6'>
+              <BsBag className='text-2xl'/>
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-[#F83D8E] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
+            
           </div>
 
           {open && (
@@ -88,7 +101,14 @@ const Header = () => {
               <ThemeToggle />
               <div className="flex gap-5 text-2xl text-[#0F0200] dark:text-white">
                 <CiSearch />
-                <BsBag />
+                <Link to={"/cart"} className='relative'>
+                  <BsBag />
+                  {cartCount > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-[#F83D8E] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                      {cartCount}
+                    </span>
+                  )}
+                </Link>
               </div>
               <a href="tel:+5689 2589 6325">
                 <button className='bg-[#F83D8E] flex items-center gap-2 py-4 px-6 rounded-full text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] dark:hover:shadow-[0_5px_15px_rgba(248,61,142,0.8)] lg:py-3 lg:px-4 lg:text-base lg:text-wrap'>

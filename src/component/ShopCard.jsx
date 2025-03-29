@@ -8,8 +8,10 @@ import Container from './Container';
 
 import { Link } from 'react-router-dom';
 import { Productdata } from './Productdata';
-import LiveSearchFilter from './LiveSearchFilter';
+import { useCart } from './CartContext';
 const ShopCard = () => {
+
+    const {addToCart} = useCart()
     // Scroll to top when the component loads
    
     const [viewMode, setViewMode] = useState('grid');
@@ -60,12 +62,7 @@ const ShopCard = () => {
                                     <div className="mb-4">
                                         <h4 className="font-semibold mb-2 dark:text-white">Categories</h4>
                                         <div className="space-y-2">
-                                            <div className="">
-                                                <input type="text"
-
-                                                />
-
-                                            </div>
+                                            
                                             <div className="flex items-center">
                                                 <input type="checkbox" id="cones" className="mr-2" />
                                                 <label htmlFor="cones" className="text-gray-700 dark:text-gray-300">Cones</label>
@@ -130,7 +127,7 @@ const ShopCard = () => {
                                                         </div>
                                                         <div className="w-1/2">
                                                             <Flex className={'justify-end'}>
-                                                                <button className="bg-[#683292] hover:bg-[#7c3eab] p-3 rounded-full transition-colors duration-300">
+                                                                <button onClick={()=> addToCart(item)} className="bg-[#683292] hover:bg-[#7c3eab] p-3 rounded-full transition-colors duration-300">
                                                                     <CiShoppingCart className='text-white text-xl' />
                                                                 </button>
                                                             </Flex>

@@ -13,6 +13,8 @@ import "slick-carousel/slick/slick-theme.css";
 import './slick-custom.css';
 import Flex from './Flex';
 import { Target } from 'lucide-react';
+import { useCart } from './CartContext';
+
 const ProductDetails = () => {
   const [activeTab, setActiveTab] = useState(0);
   const { id } = useParams();
@@ -20,9 +22,12 @@ const ProductDetails = () => {
     item.id !== parseInt(id)
   ).slice(0, 6); // Get first 6 related products
 
+
+  // access cart fintion 
+  const { addToCart } = useCart();
+  const [quantity, setQuantity] = useState(1);
   // Find the product with matching ID
   const product = Productdata.find(item => item.id === parseInt(id));
-
   if (!product) {
     return (
       <div className="text-center py-20 text-xl">
@@ -54,9 +59,9 @@ const ProductDetails = () => {
               <p className="text-2xl font-bold text-[#F83D8E] mb-6">${product.price}</p>
               <p className="text-[#646464] dark:text-gray-400 mb-8">{product.discription}</p>
               <div className="flex gap-4 items-center">
-                <Cbutton />
+                <Cbutton product={product}  initialCount={1}/>
 
-                <button className="bg-[#F83D8E] flex items-center gap-2 py-3 px-8 rounded-md text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] dark:hover:shadow-[0_5px_15px_rgba(248,61,142,0.8)] lg:py-3 lg:px-4 lg:text-base lg:text-wrap">
+                <button onClick={()=> addToCart(product)} className="bg-[#F83D8E] flex items-center gap-2 py-3 px-8 rounded-md text-white font-apa font-bold text-lg shadow-md transition-all duration-300 hover:shadow-[0_5px_15px_rgba(248,61,142,0.6)] dark:hover:shadow-[0_5px_15px_rgba(248,61,142,0.8)] lg:py-3 lg:px-4 lg:text-base lg:text-wrap">
                   Add to Cart
                 </button>
               </div>
@@ -92,10 +97,10 @@ const ProductDetails = () => {
 
                     </li>
                     <li>
-                    Net Weight: 500ml
+                      Net Weight: 500ml
                     </li>
                     <li>
-                    Shelf Life: 6 months from the manufacturing date
+                      Shelf Life: 6 months from the manufacturing date
                     </li>
                   </ul>
                 </div>
@@ -106,28 +111,28 @@ const ProductDetails = () => {
             {
               activeTab === 2 && (
                 <div className="">
-                 <ul className='text-[#646464] dark:text-gray-400 font-apa space-y-4'>
-                  <li>
-                  ⭐⭐⭐⭐⭐ Emily R. (Verified Buyer)
-                  "This vanilla ice cream is an absolute delight! The texture is incredibly smooth, and the flavor is rich without being overly sweet. It tastes like real vanilla beans, not artificial flavoring. Definitely a staple in my freezer!"
-                  </li>
-                  <li>
-                  ⭐⭐⭐⭐⭐ Michael T. (Verified Buyer)
-                  "Hands down, the creamiest and most flavorful vanilla ice cream I’ve ever had! It melts beautifully in your mouth and pairs perfectly with brownies or apple pie. Will be buying again!"
-                  </li>
-                  <li>
-                  ⭐⭐⭐⭐ Sophia L. (Verified Buyer)
-                  "Loved the taste, but I wish the container was bigger! It’s so good that it disappears too quickly in my household. Highly recommend if you’re a vanilla lover!"
-                  </li>
-                  <li>
-                  ⭐⭐⭐⭐⭐ David P. (Verified Buyer)
-                  "Perfect for making milkshakes! I used this with some fresh strawberries, and it blended into the smoothest, most flavorful shake ever. The quality is top-notch!"
-                  </li>
-                  <li>
-                  ⭐⭐⭐⭐⭐ Olivia M. (Verified Buyer)
-                  "I was skeptical at first, but this ice cream exceeded my expectations. It has a perfect balance of creaminess and a deep vanilla flavor. Tastes just like homemade!"
-                  </li>
-                 </ul>
+                  <ul className='text-[#646464] dark:text-gray-400 font-apa space-y-4'>
+                    <li>
+                      ⭐⭐⭐⭐⭐ Emily R. (Verified Buyer)
+                      "This vanilla ice cream is an absolute delight! The texture is incredibly smooth, and the flavor is rich without being overly sweet. It tastes like real vanilla beans, not artificial flavoring. Definitely a staple in my freezer!"
+                    </li>
+                    <li>
+                      ⭐⭐⭐⭐⭐ Michael T. (Verified Buyer)
+                      "Hands down, the creamiest and most flavorful vanilla ice cream I’ve ever had! It melts beautifully in your mouth and pairs perfectly with brownies or apple pie. Will be buying again!"
+                    </li>
+                    <li>
+                      ⭐⭐⭐⭐ Sophia L. (Verified Buyer)
+                      "Loved the taste, but I wish the container was bigger! It’s so good that it disappears too quickly in my household. Highly recommend if you’re a vanilla lover!"
+                    </li>
+                    <li>
+                      ⭐⭐⭐⭐⭐ David P. (Verified Buyer)
+                      "Perfect for making milkshakes! I used this with some fresh strawberries, and it blended into the smoothest, most flavorful shake ever. The quality is top-notch!"
+                    </li>
+                    <li>
+                      ⭐⭐⭐⭐⭐ Olivia M. (Verified Buyer)
+                      "I was skeptical at first, but this ice cream exceeded my expectations. It has a perfect balance of creaminess and a deep vanilla flavor. Tastes just like homemade!"
+                    </li>
+                  </ul>
                 </div>
               )
             }

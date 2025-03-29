@@ -11,13 +11,16 @@ import Faq from './component/Faq'
 import Error from './component/Error'
 import ProductDetails from './component/ProductDetails'
 import BackToTopButton from './component/BackToTopButton'
+import { CartProvider } from './component/CartContext'
+import Cart from './component/Cart'
 
 function App() {
 
   return (
     <>
     <BackToTopButton/>
-      <Routes>
+     <CartProvider>
+     <Routes>
         <Route element ={<Rootlayout/>}>
           <Route path='*' element ={<Error/>}/>
           <Route path='/' element ={<Home/>}/>
@@ -26,9 +29,11 @@ function App() {
           <Route path='/Review' element ={<Review/>}/>
           <Route path='/Faq' element ={<Faq/>}/>
           <Route path='/products/:id' element ={<ProductDetails/>}/>
+          <Route path='/Cart' element={<Cart/>}/>
           <Route/>
         </Route>
       </Routes>
+     </CartProvider>
       
     </>
   )

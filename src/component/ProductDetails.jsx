@@ -64,7 +64,7 @@ const ProductDetails = () => {
           </div>
         </div>
         <div className="">
-          <div>
+          <div >
             <ul className="flex flex-wrap gap-3 mt-7 mb-[42px] text-[#0F0200] font-apa font-bold dark:text-white ">
               <li className="py-3"><button className={`cursor-pointer ${activeTab === 0 ? 'text-[#F83D8E]  border-b-4 border-[#F83D8E]' : ''}`} onClick={() => setActiveTab(0)}>Description</button></li>
               <li className="py-3"><button className={`cursor-pointer ${activeTab === 1 ? 'text-[#F83D8E] border-b-4 border-[#F83D8E]' : ''}`} onClick={() => setActiveTab(1)}>Additional info</button></li>

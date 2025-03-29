@@ -1,7 +1,7 @@
 import { useCart } from './CartContext';
 import { CiTrash } from "react-icons/ci";
 import { Link } from 'react-router-dom';
-
+import Swal from 'sweetalert2'; // Import SweetAlert2 for alerts
 const Cart = () => {
   const {
     cart,
@@ -12,6 +12,16 @@ const Cart = () => {
     clearCart
   } = useCart(); // Access cart state & functions
 
+
+  const showAlert = ()=> {
+    Swal.fire({
+        title: "Good job!",
+        text: "Checkout Proceed complete!",
+        icon: "success"
+      }).then(()=>{
+        clearCart();
+      });
+  }
   return (
     <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold mb-8 dark:text-white">Your Cart ({cartCount})</h1>
@@ -101,12 +111,9 @@ const Cart = () => {
                 <span className="text-lg font-bold dark:text-white">Total</span>
                 <span className="text-lg font-bold text-[#F83D8E]">${cartTotal.toFixed(2)}</span>
               </div>
-              <Link 
-                to="/checkout" 
-                className="block w-full bg-[#F83D8E] text-white text-center py-3 px-4 rounded-md hover:bg-[#e0357d] transition-colors"
-              >
-                Proceed to Checkout
-              </Link>
+              <button onClick={showAlert} className='block w-full bg-[#F83D8E] cursor-pointer text-white text-center py-3 px-4 rounded-md hover:bg-[#e0357d] transition-colors'>
+              Proceed to Checkout
+              </button>
             </div>
           </div>
         </div>
@@ -116,3 +123,6 @@ const Cart = () => {
 };
 
 export default Cart;
+
+
+                

@@ -29,6 +29,7 @@
     "react-scroll-trigger": "^0.6.14",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.17.2",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.8",
     "tailwindcss-animate": "^1.0.7"

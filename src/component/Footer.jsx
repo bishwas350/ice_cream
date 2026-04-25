@@ -1,65 +1,202 @@
-import React from 'react'
-import Container from './Container'
-import Flex from './Flex'
-import logo from '../assets/img/Group 2.png'
+import Container from "./Container";
+import logo from "../assets/img/Group 2.png";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
-import { FaPhone } from "react-icons/fa";
+import {
+  FaPhone,
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
+
+const navLinks = ["Home", "About", "Shop", "Product", "Blog", "Contact"];
+
+const contactInfo = [
+  {
+    icon: <IoLocationSharp className="text-base text-[#F83D8E]" />,
+    label: "Address",
+    value: "121 King Street Melbourne, 3000, Australia",
+  },
+  {
+    icon: <MdEmail className="text-base text-[#F83D8E]" />,
+    label: "Email",
+    value: "info@icedelights.com",
+  },
+  {
+    icon: <FaPhone className="text-sm text-[#F83D8E]" />,
+    label: "Phone",
+    value: "+5689 2589 6325",
+    sub: "Available 24/7",
+  },
+];
+
+const socials = [
+  { icon: <FaFacebookF />, label: "Facebook", href: "#" },
+  { icon: <FaInstagram />, label: "Instagram", href: "#" },
+  { icon: <FaTwitter />, label: "Twitter", href: "#" },
+  { icon: <FaLinkedinIn />, label: "LinkedIn", href: "#" },
+];
 
 const Footer = () => {
   return (
-    <div className='bg-[url("./assets/img/Section.png")] bg-cover bg-no-repeat py-8 md:py-12 lg:py-16 relative'>
-      <div className="absolute inset-0 bg-transparent dark:bg-gray-900/80"></div>
+    <footer
+      className="relative overflow-hidden py-12 md:py-16"
+      style={{
+        background:
+          "linear-gradient(135deg, #2d1b3d 0%, #1a1a2e 40%, #0d2020 100%)",
+      }}
+    >
+      {/* Glow Effects */}
+      <div
+        className="pointer-events-none absolute top-0 left-0 h-72 w-72 rounded-full"
+        style={{
+          background: "rgba(248,61,142,0.07)",
+          filter: "blur(80px)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute right-0 bottom-0 h-60 w-60 rounded-full"
+        style={{
+          background: "rgba(29,158,117,0.06)",
+          filter: "blur(80px)",
+        }}
+      />
 
       <Container>
-        <Flex className={"flex-col lg:flex-row items-center justify-center lg:justify-between xl:justify-around gap-8 md:gap-10 lg:gap-4 px-4 md:px-6 lg:px-8 relative z-10"}>
-          <div className="mb-8 lg:mb-0">
-            <img src={logo} alt="Ice Cream Logo" className="w-32 md:w-36 lg:w-40 h-auto" />
-          </div>
-          <div className="w-full lg:w-auto">
+        <div className="relative z-10 grid grid-cols-1 gap-10 px-4 sm:grid-cols-2 md:px-6 lg:grid-cols-4">
+          {/* Logo Section */}
+          <div className="flex flex-col gap-4">
+            <div className="w-fit rounded-2xl border border-white/10 bg-white/5 p-4">
+              <img src={logo} alt="IceDelights Logo" className="h-auto w-28" />
+            </div>
 
-            <Flex className={'flex-col md:flex-row gap-8 md:gap-12 lg:gap-16'}>
-              <div className="w-full md:w-auto">
-                <h3 className='text-xl md:text-2xl font-apa font-semibold leading-6 text-white text-center mb-4'>Navigation</h3>
-                <ul className='text-center text-[14px] md:text-base font-apa text-[#CFB6E2] dark:text-gray-300 flex flex-col gap-2'>
-                  <li className="flex items-center justify-center"><span className='text-[#F83D8E] text-3xl md:text-4xl mr-2'>•</span>Home</li>
-                  <li className="flex items-center justify-center"><span className='text-[#F83D8E] text-3xl md:text-4xl mr-2'>•</span>About</li>
-                  <li className="flex items-center justify-center"><span className='text-[#F83D8E] text-3xl md:text-4xl mr-2'>•</span>Shop</li>
-                  <li className="flex items-center justify-center"><span className='text-[#F83D8E] text-3xl md:text-4xl mr-2'>•</span>Product</li>
-                  <li className="flex items-center justify-center"><span className='text-[#F83D8E] text-3xl md:text-4xl mr-2'>•</span>Blog</li>
-                  <li className="flex items-center justify-center"><span className='text-[#F83D8E] text-3xl md:text-4xl mr-2'>•</span>Contact</li>
-                </ul>
-              </div>
-              <div className="w-full md:w-auto flex flex-col gap-8">
-                <div className="flex flex-col items-center">
-                  <IoLocationSharp className='text-2xl md:text-3xl text-white dark:text-white mb-2' />
-                  <h3 className='text-[#CFB6E2] text-xl md:text-2xl font-apa mb-2'>Address</h3>
+            <p className="max-w-[180px] text-xs leading-relaxed text-white/40">
+              Crafting happiness one scoop at a time since 2010.
+            </p>
+
+            {/* Social Icons */}
+            <div className="mt-1 flex gap-2">
+              {socials.map(({ icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/8 text-xs text-white/60 transition-all duration-200 hover:border-[#F83D8E] hover:bg-[#F83D8E] hover:text-white"
+                >
+                  {icon}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <h3 className="mb-4 border-b border-[#F83D8E]/25 pb-2 text-xs font-semibold tracking-widest text-[#F83D8E] uppercase">
+              Navigation
+            </h3>
+
+            <ul className="flex flex-col gap-2.5">
+              {navLinks.map((link) => (
+                <li key={link}>
+                  <a
+                    href="#"
+                    className="flex items-center gap-2 text-[13px] text-[#CFB6E2]/85 transition-all duration-200 hover:translate-x-1 hover:text-[#F83D8E]"
+                  >
+                    <span className="text-sm text-[#F83D8E]">›</span>
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="mb-4 border-b border-[#F83D8E]/25 pb-2 text-xs font-semibold tracking-widest text-[#F83D8E] uppercase">
+              Contact Us
+            </h3>
+
+            <div className="flex flex-col gap-4">
+              {contactInfo.map(({ icon, label, value, sub }) => (
+                <div key={label} className="flex items-start gap-3">
+                  <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[#F83D8E]/30 bg-[#F83D8E]/15">
+                    {icon}
+                  </div>
+
                   <div>
-                    <p className='text-[#CFB6E2] dark:text-gray-300 text-sm md:text-base font-apa text-center max-w-[200px]'>
-                      121 King Street Melbourne, 3000, Australia
+                    <p className="mb-0.5 text-[10px] uppercase tracking-wider text-white/40">
+                      {label}
                     </p>
-                  </div>
-                </div>
-                <div className="flex flex-col items-center">
-                  <MdEmail className='text-2xl md:text-3xl text-white dark:text-white mb-2' />
-                  <h3 className='text-[#CFB6E2] text-xl md:text-2xl font-apa mb-2'>Email</h3>
-                  <div>
-                    <p className='text-[#CFB6E2] text-sm md:text-base font-apa text-center'>info@icedelights.com</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center w-full md:w-auto">
-                <FaPhone className='text-2xl md:text-3xl text-white dark:text-white mb-2' />
-                <h3 className='text-white text-xl md:text-2xl font-apa font-bold mb-2'>+5689 2589 6325</h3>
-                <p className='text-[#CFB6E2] text-sm md:text-base font-apa text-center'>Got Questions? Call us 24/7</p>
-              </div>
-            </Flex>
-          </div>
-          
-        </Flex>
-      </Container>
-    </div>
-  )
-}
 
-export default Footer
+                    <p className="text-[12px] leading-relaxed text-[#CFB6E2]/90">
+                      {value}
+                    </p>
+
+                    {sub && (
+                      <p className="mt-0.5 text-[10px] text-white/35">{sub}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="mb-4 border-b border-[#F83D8E]/25 pb-2 text-xs font-semibold tracking-widest text-[#F83D8E] uppercase">
+              Newsletter
+            </h3>
+
+            <p className="mb-4 text-xs leading-relaxed text-white/45">
+              Get the latest flavors, offers & sweet deals delivered to your
+              inbox.
+            </p>
+
+            <div className="flex flex-col gap-2">
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="rounded-lg border border-white/15 bg-white/7 px-3 py-2.5 text-xs text-white placeholder:text-white/30 outline-none transition-colors focus:border-[#F83D8E]/50"
+              />
+
+              <button
+                className="rounded-lg py-2.5 text-xs font-semibold tracking-wide text-white transition-opacity hover:opacity-90"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #F83D8E, #c0392b)",
+                }}
+              >
+                Subscribe Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="relative z-10 mt-10 px-4 md:px-6">
+          <hr
+            className="mb-4 border-none border-t border-white/10"
+            style={{
+              borderTopWidth: "0.5px",
+              borderColor: "rgba(255,255,255,0.1)",
+            }}
+          />
+
+          <div className="flex flex-col items-center justify-between gap-2 sm:flex-row">
+            <p className="text-[11px] text-white/30">
+              © 2025 <span className="text-[#F83D8E]">IceDelights</span>. All
+              rights reserved.
+            </p>
+
+            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] text-white/30">
+              Privacy Policy · Terms of Use
+            </span>
+          </div>
+        </div>
+      </Container>
+    </footer>
+  );
+};
+
+export default Footer;
